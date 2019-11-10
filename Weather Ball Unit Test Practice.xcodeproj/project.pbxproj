@@ -13,7 +13,23 @@
 		4E2BB2E123789C0500D3E4B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2BB2DF23789C0500D3E4B8 /* Main.storyboard */; };
 		4E2BB2E323789C0800D3E4B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E2BB2E223789C0800D3E4B8 /* Assets.xcassets */; };
 		4E2BB2E623789C0800D3E4B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2BB2E423789C0800D3E4B8 /* LaunchScreen.storyboard */; };
+		4E2BB2F223789C7700D3E4B8 /* Doubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BB2F123789C7700D3E4B8 /* Doubles.swift */; };
+		4E2BB2F423789CCE00D3E4B8 /* WeatherListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BB2F323789CCE00D3E4B8 /* WeatherListViewModel.swift */; };
+		4E2BB2F623789D0100D3E4B8 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BB2F523789D0100D3E4B8 /* SettingsViewModel.swift */; };
+		4E2BB30623789D8100D3E4B8 /* SettingsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BB30523789D8100D3E4B8 /* SettingsViewModelTest.swift */; };
+		4E2BB30823789DF500D3E4B8 /* WeatherListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BB30723789DF500D3E4B8 /* WeatherListViewModelTests.swift */; };
+		4E2BB30A23789E9300D3E4B8 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 4E2BB30923789E9300D3E4B8 /* Readme.md */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4E2BB30023789D4200D3E4B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E2BB2CE23789C0500D3E4B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E2BB2D523789C0500D3E4B8;
+			remoteInfo = "Weather Ball Unit Test Practice";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4E2BB2D623789C0500D3E4B8 /* Weather Ball Unit Test Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather Ball Unit Test Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +40,25 @@
 		4E2BB2E223789C0800D3E4B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E2BB2E523789C0800D3E4B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E2BB2E723789C0800D3E4B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E2BB2F123789C7700D3E4B8 /* Doubles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doubles.swift; sourceTree = "<group>"; };
+		4E2BB2F323789CCE00D3E4B8 /* WeatherListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewModel.swift; sourceTree = "<group>"; };
+		4E2BB2F523789D0100D3E4B8 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		4E2BB2FB23789D4200D3E4B8 /* Weather Ball Unit Test PracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Weather Ball Unit Test PracticeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E2BB2FF23789D4200D3E4B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E2BB30523789D8100D3E4B8 /* SettingsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTest.swift; sourceTree = "<group>"; };
+		4E2BB30723789DF500D3E4B8 /* WeatherListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewModelTests.swift; sourceTree = "<group>"; };
+		4E2BB30923789E9300D3E4B8 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4E2BB2D323789C0500D3E4B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E2BB2F823789D4200D3E4B8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,7 +71,9 @@
 		4E2BB2CD23789C0500D3E4B8 = {
 			isa = PBXGroup;
 			children = (
+				4E2BB30923789E9300D3E4B8 /* Readme.md */,
 				4E2BB2D823789C0500D3E4B8 /* Weather Ball Unit Test Practice */,
+				4E2BB2FC23789D4200D3E4B8 /* Weather Ball Unit Test PracticeTests */,
 				4E2BB2D723789C0500D3E4B8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				4E2BB2D623789C0500D3E4B8 /* Weather Ball Unit Test Practice.app */,
+				4E2BB2FB23789D4200D3E4B8 /* Weather Ball Unit Test PracticeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +90,8 @@
 		4E2BB2D823789C0500D3E4B8 /* Weather Ball Unit Test Practice */ = {
 			isa = PBXGroup;
 			children = (
+				4E2BB2F023789C4500D3E4B8 /* ViewModels */,
+				4E2BB2ED23789C2B00D3E4B8 /* Extensions */,
 				4E2BB2D923789C0500D3E4B8 /* AppDelegate.swift */,
 				4E2BB2DB23789C0500D3E4B8 /* SceneDelegate.swift */,
 				4E2BB2DD23789C0500D3E4B8 /* ViewController.swift */,
@@ -65,6 +101,33 @@
 				4E2BB2E723789C0800D3E4B8 /* Info.plist */,
 			);
 			path = "Weather Ball Unit Test Practice";
+			sourceTree = "<group>";
+		};
+		4E2BB2ED23789C2B00D3E4B8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4E2BB2F123789C7700D3E4B8 /* Doubles.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4E2BB2F023789C4500D3E4B8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4E2BB2F323789CCE00D3E4B8 /* WeatherListViewModel.swift */,
+				4E2BB2F523789D0100D3E4B8 /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4E2BB2FC23789D4200D3E4B8 /* Weather Ball Unit Test PracticeTests */ = {
+			isa = PBXGroup;
+			children = (
+				4E2BB2FF23789D4200D3E4B8 /* Info.plist */,
+				4E2BB30523789D8100D3E4B8 /* SettingsViewModelTest.swift */,
+				4E2BB30723789DF500D3E4B8 /* WeatherListViewModelTests.swift */,
+			);
+			path = "Weather Ball Unit Test PracticeTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +150,24 @@
 			productReference = 4E2BB2D623789C0500D3E4B8 /* Weather Ball Unit Test Practice.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4E2BB2FA23789D4200D3E4B8 /* Weather Ball Unit Test PracticeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E2BB30223789D4200D3E4B8 /* Build configuration list for PBXNativeTarget "Weather Ball Unit Test PracticeTests" */;
+			buildPhases = (
+				4E2BB2F723789D4200D3E4B8 /* Sources */,
+				4E2BB2F823789D4200D3E4B8 /* Frameworks */,
+				4E2BB2F923789D4200D3E4B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E2BB30123789D4200D3E4B8 /* PBXTargetDependency */,
+			);
+			name = "Weather Ball Unit Test PracticeTests";
+			productName = "Weather Ball Unit Test PracticeTests";
+			productReference = 4E2BB2FB23789D4200D3E4B8 /* Weather Ball Unit Test PracticeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +180,10 @@
 				TargetAttributes = {
 					4E2BB2D523789C0500D3E4B8 = {
 						CreatedOnToolsVersion = 11.2;
+					};
+					4E2BB2FA23789D4200D3E4B8 = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = 4E2BB2D523789C0500D3E4B8;
 					};
 				};
 			};
@@ -116,6 +201,7 @@
 			projectRoot = "";
 			targets = (
 				4E2BB2D523789C0500D3E4B8 /* Weather Ball Unit Test Practice */,
+				4E2BB2FA23789D4200D3E4B8 /* Weather Ball Unit Test PracticeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,7 +213,15 @@
 			files = (
 				4E2BB2E623789C0800D3E4B8 /* LaunchScreen.storyboard in Resources */,
 				4E2BB2E323789C0800D3E4B8 /* Assets.xcassets in Resources */,
+				4E2BB30A23789E9300D3E4B8 /* Readme.md in Resources */,
 				4E2BB2E123789C0500D3E4B8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E2BB2F923789D4200D3E4B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,11 +234,31 @@
 			files = (
 				4E2BB2DE23789C0500D3E4B8 /* ViewController.swift in Sources */,
 				4E2BB2DA23789C0500D3E4B8 /* AppDelegate.swift in Sources */,
+				4E2BB2F223789C7700D3E4B8 /* Doubles.swift in Sources */,
 				4E2BB2DC23789C0500D3E4B8 /* SceneDelegate.swift in Sources */,
+				4E2BB2F423789CCE00D3E4B8 /* WeatherListViewModel.swift in Sources */,
+				4E2BB2F623789D0100D3E4B8 /* SettingsViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E2BB2F723789D4200D3E4B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E2BB30623789D8100D3E4B8 /* SettingsViewModelTest.swift in Sources */,
+				4E2BB30823789DF500D3E4B8 /* WeatherListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4E2BB30123789D4200D3E4B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E2BB2D523789C0500D3E4B8 /* Weather Ball Unit Test Practice */;
+			targetProxy = 4E2BB30023789D4200D3E4B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4E2BB2DF23789C0500D3E4B8 /* Main.storyboard */ = {
@@ -316,6 +430,46 @@
 			};
 			name = Release;
 		};
+		4E2BB30323789D4200D3E4B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6XC73DDQ2K;
+				INFOPLIST_FILE = "Weather Ball Unit Test PracticeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keepitfreshios.Weather-Ball-Unit-Test-PracticeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weather Ball Unit Test Practice.app/Weather Ball Unit Test Practice";
+			};
+			name = Debug;
+		};
+		4E2BB30423789D4200D3E4B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6XC73DDQ2K;
+				INFOPLIST_FILE = "Weather Ball Unit Test PracticeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keepitfreshios.Weather-Ball-Unit-Test-PracticeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weather Ball Unit Test Practice.app/Weather Ball Unit Test Practice";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -333,6 +487,15 @@
 			buildConfigurations = (
 				4E2BB2EB23789C0800D3E4B8 /* Debug */,
 				4E2BB2EC23789C0800D3E4B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E2BB30223789D4200D3E4B8 /* Build configuration list for PBXNativeTarget "Weather Ball Unit Test PracticeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E2BB30323789D4200D3E4B8 /* Debug */,
+				4E2BB30423789D4200D3E4B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
