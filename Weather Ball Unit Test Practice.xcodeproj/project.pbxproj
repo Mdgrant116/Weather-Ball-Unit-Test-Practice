@@ -90,12 +90,12 @@
 		4E2BB2D823789C0500D3E4B8 /* Weather Ball Unit Test Practice */ = {
 			isa = PBXGroup;
 			children = (
-				4E2BB2F023789C4500D3E4B8 /* ViewModels */,
-				4E2BB2ED23789C2B00D3E4B8 /* Extensions */,
+				4EC145DF237F35B5005B5641 /* Old MVVM */,
 				4E2BB2D923789C0500D3E4B8 /* AppDelegate.swift */,
 				4E2BB2DB23789C0500D3E4B8 /* SceneDelegate.swift */,
-				4E2BB2DD23789C0500D3E4B8 /* ViewController.swift */,
-				4E2BB2DF23789C0500D3E4B8 /* Main.storyboard */,
+				4EC145E0237F363C005B5641 /* Model */,
+				4EC145DD237F3575005B5641 /* View */,
+				4EC145DE237F358F005B5641 /* Controller */,
 				4E2BB2E223789C0800D3E4B8 /* Assets.xcassets */,
 				4E2BB2E423789C0800D3E4B8 /* LaunchScreen.storyboard */,
 				4E2BB2E723789C0800D3E4B8 /* Info.plist */,
@@ -128,6 +128,38 @@
 				4E2BB30723789DF500D3E4B8 /* WeatherListViewModelTests.swift */,
 			);
 			path = "Weather Ball Unit Test PracticeTests";
+			sourceTree = "<group>";
+		};
+		4EC145DD237F3575005B5641 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E2BB2DF23789C0500D3E4B8 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EC145DE237F358F005B5641 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E2BB2DD23789C0500D3E4B8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4EC145DF237F35B5005B5641 /* Old MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				4E2BB2F023789C4500D3E4B8 /* ViewModels */,
+				4E2BB2ED23789C2B00D3E4B8 /* Extensions */,
+			);
+			path = "Old MVVM";
+			sourceTree = "<group>";
+		};
+		4EC145E0237F363C005B5641 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
