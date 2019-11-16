@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     
     // MARK: - Outlets
@@ -16,15 +16,63 @@ class ViewController: UIViewController {
     @IBOutlet var conditionImageView: UIImageView!
     @IBOutlet var temperaturLabel: UILabel!
     @IBOutlet var cityLabel: UILabel!
+    @IBOutlet var searchTextField: UITextField!
+    
+    var weatherManager = WeatherManager()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchTextField.delegate = self
         
         
     }
 
+    
+    // MARK: - Textfield Delegate Methods
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        print(searchTextField.text!)
+        searchTextField.endEditing(true)
+        
+        return true
+        
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let city = searchTextField.text {
+            
+            weatherManager.fetchWeather(cityName: city)
+        }
+        searchTextField.text = ""
+        
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+       
+        if textField.text != "" {
+            
+            return true
+            
+        } else {
+            
+            textField.placeholder = "Enter City"
+            
+            return false
+        }
+        
+    }
 
+    // MARK: - Buttons
+    
+    @IBAction func searchPressed(_ sender: Any) {
+    
+        searchTextField.endEditing(true)
+        print(searchTextField.text!)
+        
+    }
+    
 }
 
