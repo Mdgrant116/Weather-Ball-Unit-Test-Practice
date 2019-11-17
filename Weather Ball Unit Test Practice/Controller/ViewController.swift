@@ -71,11 +71,16 @@ class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDeleg
     
     //MARK: - Weather Manager Delegate Methods
     
-    func didUpdateWeather(weather: WeatherModel) {
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
         
         print(weather.temperature)
            
        }
+    
+    func didFailWithError(error: Error) {
+        
+        print(error)
+    }
     
     // MARK: - Buttons
     
