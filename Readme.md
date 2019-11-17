@@ -28,33 +28,33 @@ Protocol UITextFieldDelegate {
 
 After we adopt this protocol in our class, we need to create a delegate property with a required type.
 
-var delegate: UITextFieldDelgate
+    var delegate: UITextFieldDelgate
 
 In order to set a class or a struct as the delelage it must conform to the delegate protocol of the same type. This is to ensure that you can actually do the things that need to be done. It can safely call a method like textFieldDidBeginEditing() because it knows that you were required to conform.
 
 For your controller to know about the delegate, your controller has to have an object. For instance.
 
-let textField = UITextField()
+    let textField = UITextField()
 
 Now that we have a textfield created from this reusable blue print of a UITextfield we can set its delegate as self.
 
-textField.delegate = self 
+    textField.delegate = self 
 
 The sequence of events that happens when you fun your app is first run the app is the line where you created the textfield from the reusable template.
 
-let textField = UITextField()
+    let textField = UITextField()
 
 Next we set that textFields delegate property to self.
 
-textField.delegate = self 
+    textField.delegate = self 
 
 The next thing that would happen is at some point the delegate will detect that the user has starting typing something in the textfield.
 
-func textFieldDidBeginEditing() {
+    func textFieldDidBeginEditing() {
 
-//fancy code 
+    //fancy code 
 
-}
+    }
 
 A Typealiase combines two protocols into one.
 
@@ -82,20 +82,7 @@ First we have to create a URL, then we create a URL Session. This is going to be
 
 When you start a task, they begin in a suspended state, so you need to call your task with a .resume()
 
-## **Dark Mode Notes**
-
-If you use the system colors in your UI, they will automatically update with light or dark mode, however, if you use a custom color, they won’t.
-
-To fix this, go to your assets and create a new color set. Change the appearance to include Any, Light, and Dark. When you select the squares, you get to define a custom color. Choose your colors, and give your color set a name. Select your new color in the attributes inspector.
-
-If you want to select a different background image for light and dark mode, in appearances inside the assets folder, select Any, Light and Dark just like before. 
-
-
-## **Using Vector Assets**
-
-In the assets inspector, click the image you want, and check the box that says preserve vector data.  Then in the scales section, select single scale.
-
-## **Decoding JSON**
+## **Decoding JSON Notes**
 
 JSON stands for JavaScript Object Notation 
 
@@ -108,6 +95,63 @@ Create a decodable object. The decode method is throwable, which means that if s
 When you’re creating the structures for your JSON to be parsed, you can’t just name the properties anything you want. They have to be written the same way they are displayed in the JSON you’re decoding.
 
 To actually use the data, you’re going to have to return something from the data you’re parsing.
+
+## **Dispatch Queue Notes**
+
+When you try and update your UI from inside a completion handler you’ll get a crash because its not on the main thread. The reason you use a completion handler in the first place is because it handles long running task. These tasks are executed in the background so that we don’t block the UI. If we didn’t, we’d be telling the UI to wait until the process was finished before we let the user do anything, which will make the app look like its completely frozen.
+
+So if you’re trying to update the UI from inside a closure, you have to call the main thread to update the user interface in the background. 
+
+Wrap your UI update in DispatchQueue.main.async like this
+
+    dispatchQueue.main.async {
+
+    self.label.text = “You did the thing!”
+
+    }
+
+## **Extension Notes**
+
+When adding extra capabilities to a project, instead of diving into the original code and ripping things out and putting other things in, you can extend the functionality of the existing code.
+
+To extend something, you would use the extend keyword, and then the type of thing you’re trying to extend. This could be a class, or a struct, or even a protocol. And inside the extension, you would add the new functionality to that type. Something like this.
+
+    extension ViewController {
+
+    // Amazing New Thing
+
+    }
+
+Swift allows you to make new functions out of existing functions as long as they have different parameter names.
+
+To avoid having to write out the same implementation if we wanted, we can define a default implementation by extending a protocol. This is what’s happening when we adopt something like UITextFieldDelegate, which is why Xcode doesn’t try to rip our heads off for not implementing certain protocol stubs. The functionality is optional.
+
+Extensions are also really handy for organizing code, because we can create extensions that adopt different protocols.
+
+## **Cleaning Up Your Code Notes**
+
+You can clean and organize your code in many ways. One of them is splitting up your code into sections using MARK comments. 
+
+    //MARK: - Whatever you want
+
+To make this easier, you can take advantage of code snippets. All you have to do is select the part of the code you want to reuse, right click on it, and go to create code snippet. You can give it a name, and even a summary. 
+
+To call your code snippet, make sure to give it a completion name, and that’s what you’ll type to call it.
+
+## **Dark Mode Notes**
+
+If you use the system colors in your UI, they will automatically update with light or dark mode, however, if you use a custom color, they won’t.
+
+To fix this, go to your assets and create a new color set. Change the appearance to include Any, Light, and Dark. When you select the squares, you get to define a custom color. Choose your colors, and give your color set a name. Select your new color in the attributes inspector.
+
+If you want to select a different background image for light and dark mode, in appearances inside the assets folder, select Any, Light and Dark just like before. 
+
+
+## **Using Vector Assets Notes**
+
+In the assets inspector, click the image you want, and check the box that says preserve vector data.  Then in the scales section, select single scale.
+
+
 
 ## **Unit Test Notes**
 

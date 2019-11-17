@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Weather View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather_Ball_Unit_Test_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="Weather_Ball_Unit_Test_Practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,7 +118,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="cityLabel" destination="0If-Qv-UXo" id="9Bw-Zt-9am"/>
+                        <outlet property="cityLabel" destination="0If-Qv-UXo" id="K5U-sC-6hf"/>
                         <outlet property="conditionImageView" destination="0Ms-Bq-BAZ" id="vEc-nP-aKz"/>
                         <outlet property="searchTextField" destination="EEv-Z1-6d5" id="bl5-SU-WcP"/>
                         <outlet property="temperaturLabel" destination="xe1-Lb-V1A" id="yL7-N7-2JM"/>
