@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDelegate {
+   
+    
 
     
     // MARK: - Outlets
@@ -25,7 +27,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         searchTextField.delegate = self
-        
+        weatherManager.delgate = self 
         
     }
 
@@ -34,7 +36,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        print(searchTextField.text!)
         searchTextField.endEditing(true)
         
         return true
@@ -45,7 +46,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if let city = searchTextField.text {
             
             weatherManager.fetchWeather(cityName: city)
+            
         }
+        
         searchTextField.text = ""
         
     }
@@ -65,13 +68,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
 
+    
+    //MARK: - Weather Manager Delegate Methods
+    
+    func didUpdateWeather(weather: WeatherModel) {
+        
+        print(weather.temperature)
+           
+       }
+    
     // MARK: - Buttons
     
     @IBAction func searchPressed(_ sender: Any) {
     
         searchTextField.endEditing(true)
-        print(searchTextField.text!)
-        
     }
     
 }

@@ -8,7 +8,14 @@
 
 import Foundation
 
+protocol WeatherManagerDelegate {
+    
+    func didUpdateWeather(weather: WeatherModel)
+}
+
 struct WeatherManager {
+    
+    var delgate: WeatherManagerDelegate?
     
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=d7b5d1a2082c43bd6c3a7686f6f5f404&units=metric"
     
@@ -32,7 +39,24 @@ struct WeatherManager {
             
             //Step 3 Give Session A Task
             
-            let task = session.dataTask(with: url, completionHandler: handle(data:response:error:))
+            let task = session.dataTask(with: url) { (data, response, error) in
+                
+                
+                if error != nil {
+                    
+                    print(error!)
+                    
+                    return
+                }
+                if let safeData = data {
+                    
+                    if let weather = self.parseJSON(weatherData: safeData) {
+                        
+                        self.delgate?.didUpdateWeather(weather: weather)
+                    }
+                }
+                
+            }
             
             //Step 4 Start Task
             
@@ -41,19 +65,32 @@ struct WeatherManager {
         }
         
     }
-    func handle(data: Data?, response: URLResponse?, error: Error?) {
+    
+    func parseJSON(weatherData: Data) -> WeatherModel? {
         
-        if error != nil {
+        let decoder = JSONDecoder()
+        
+        do {
             
-            print(error!)
+         let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
+        
+           
+            let id = decodedData.weather[0].id
+            let temperature = decodedData.main.temp
+            let cityName = decodedData.name
             
-            return
+            let weather = WeatherModel(conditionId: id, cityName: cityName, temperature: temperature)
+            
+            return weather
+            
+        } catch {
+            
+            print(error)
+            return nil
         }
-        if let safeData = data {
-            
-            let dataString = String(data: safeData, encoding: .utf8)
-            
-            print(dataString)
-        }
+        
     }
+    
+   
+    
 }

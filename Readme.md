@@ -8,9 +8,12 @@ When your class or struct adopts a protocol, you must conform to all of its stub
 
 Protocols can be adopted by classes or structures. 
 
+By convention you usually create the protocol in the same class that’s going to be using it.
+
 Sometimes protocols are more appropriate to use than class inheritance because there may be a case where you’ll want the adopted class or struct to have the ability to some things, but not others. For example if you had a bird class, and gave them the ability to fly, you’d run into a situation where you may have an eagle, or a sparrow who can fly, and a penguin who is also a bird, but can’t fly. In this case inheritance may not be the best option for you. The same is true for birds that can swim, but not fly, or birds that can do neither, like a rooster. In this situation you could create a protocol with a can fly method, and apply it to only the birds that need the functionality, instead of giving it to the bird class as a whole.
 
 You can adopt multiple protocols. If you’re inheriting from a class, the superclass comes first, then the protocols.
+
 
 ## **Delegate Notes**
 
@@ -53,6 +56,8 @@ func textFieldDidBeginEditing() {
 
 }
 
+A Typealiase combines two protocols into one.
+
 ## **API Notes**
 
 API stands for application Programming Interface.
@@ -89,6 +94,20 @@ If you want to select a different background image for light and dark mode, in a
 ## **Using Vector Assets**
 
 In the assets inspector, click the image you want, and check the box that says preserve vector data.  Then in the scales section, select single scale.
+
+## **Decoding JSON**
+
+JSON stands for JavaScript Object Notation 
+
+The JSON data comes back in the data format, so you’re going to have to parse it into something your app can understand. 
+
+To parse data from the JSON form, you first have to inform the compiler how the data is structured. We can do that by creating a struct! We have to basically break down the structure of the JSON for the compiler to understand what’s going on. Then we can assign it property names and turn it into a swift object. Your struct also has to conform to the decodable protocol.
+
+Create a decodable object. The decode method is throwable, which means that if something goes wrong, it can throw and error message. So you have to mark it with a try keyword. You should also wrap it in a do catch block. This means that you can try and run your code, and if it does throw and error, you can catch it. 
+
+When you’re creating the structures for your JSON to be parsed, you can’t just name the properties anything you want. They have to be written the same way they are displayed in the JSON you’re decoding.
+
+To actually use the data, you’re going to have to return something from the data you’re parsing.
 
 ## **Unit Test Notes**
 
